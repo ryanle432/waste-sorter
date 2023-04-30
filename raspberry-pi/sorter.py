@@ -28,8 +28,8 @@ red_led2 = LED(6) #recycle capacity
 red_led3 = LED(23) #compost capacity
 white_led = PWMLED(24) #Status light and retake photo
 
-recycle_servo1 = (8, min_pulse_width=0.0006, max_pulse_width=0.0023)
-recycle_servo2 = (7, min_pulse_width=0.0006, max_pulse_width=0.0023)
+recycle_servo1 = AngularServo(8, min_pulse_width=0.0006, max_pulse_width=0.0023)
+recycle_servo2 = AngularServo(7, min_pulse_width=0.0006, max_pulse_width=0.0023)
 
 #camera = PiCamera()
 
