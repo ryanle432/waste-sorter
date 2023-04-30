@@ -9,7 +9,7 @@
 # pip install opencv-python
 
 #import Pi GPIO library button class
-from gpiozero import Button, LED, PWMLED
+from gpiozero import Button, LED, PWMLED, AngularServo
 import cv2
 from time import sleep
 
@@ -27,6 +27,9 @@ red_led1 = LED(5) #garbage capacity
 red_led2 = LED(6) #recycle capacity
 red_led3 = LED(23) #compost capacity
 white_led = PWMLED(24) #Status light and retake photo
+
+recycle_servo1 = (8, min_pulse_width=0.0006, max_pulse_width=0.0023)
+recycle_servo2 = (7, min_pulse_width=0.0006, max_pulse_width=0.0023)
 
 #camera = PiCamera()
 
@@ -47,8 +50,15 @@ def led_select(label):
     # print(label)
     if label == "cardboard":
         yellow_led.on()
+        recycle_servo1.angle = 90
+        recycle_servo2.angle= 90
+
         print("cardboard")
-        sleep(5)
+        sleep(2)
+
+        yellow_led.off()
+        recycle_servo1.angle = 0
+        recyle_servo2.angle = 0
 
     elif label == "glass":
         yellow_led.on()
