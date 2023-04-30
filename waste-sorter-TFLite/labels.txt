@@ -1,0 +1,7 @@
+cardboard
+compost
+glass
+metal
+not trash
+paper
+plastic

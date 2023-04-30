@@ -10,7 +10,7 @@ class ImageClassificationModel {
     height: number = 224;
     width: number = 224;
     outputName: string = '';
-    inputKey = "Image";
+    inputKey = "image";
     outputKey = "Confidences";
     labelKey = "Label";
     labels: string[] = [];
@@ -39,6 +39,7 @@ class ImageClassificationModel {
                 throw new Error(versionMessage);
             }
             this.model = await tf.loadGraphModel(this.modelPath);
+            //this.model = await tf.loadLayersModel(this.modelPath);
             console.log("Model loaded!");
         }
     }
