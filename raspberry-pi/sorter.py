@@ -28,14 +28,14 @@ white_led = PWMLED(24) #Status light and retake photo
 recycle_servo1 = AngularServo(8, min_pulse_width=0.0006, max_pulse_width=0.0023)
 recycle_servo2 = AngularServo(7, min_pulse_width=0.0006, max_pulse_width=0.0023)
 
-recycle_servo1.angle = 0
-recycle_servo2.angle = 0
+recycle_servo1.angle = 90
+recycle_servo2.angle = 90
 
 compost_servo1 = AngularServo(20, min_pulse_width=0.0006, max_pulse_width=0.0023)
 compost_servo2 = AngularServo(21, min_pulse_width=0.0006, max_pulse_width=0.0023)
 
-compost_servo1.angle = 0
-compost_servo2.angle = 0
+compost_servo1.angle = 90
+compost_servo2.angle = 90
 
 #camera = PiCamera()
 
