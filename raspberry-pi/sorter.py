@@ -73,10 +73,6 @@ def led_select(label):
         print("compost")
         sleep(5)
 
-    elif label == "not trash":
-        print("not trash")
-        white_led.on()
-
     else:
         yellow_led.off()
         blue_led.off()
@@ -91,7 +87,7 @@ while True:
     if button.is_pressed:
         take_photo()
         # Run photo through Lobe TF model
-        result = model.predict_from_file('/home/pi/Pictures/image.jpg')
+        result = model.predict_from_file('./image.jpg')
         # --> Change image path
         led_select(result.prediction)
     else:
