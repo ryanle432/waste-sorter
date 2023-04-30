@@ -20,12 +20,9 @@ model = ImageModel.load('./waste-sorter-TFLite')
 #Create input, output, and camera objects
 button = Button(2)
 
-yellow_led = LED(17) #garbage
-blue_led = LED(27) #recycle
-green_led = LED(22) #compost
-red_led1 = LED(5) #garbage capacity
-red_led2 = LED(6) #recycle capacity
-red_led3 = LED(23) #compost capacity
+yellow_led = LED(17) #recycle
+blue_led = LED(27) #compost
+green_led = LED(22) 
 white_led = PWMLED(24) #Status light and retake photo
 
 recycle_servo1 = AngularServo(8, min_pulse_width=0.0006, max_pulse_width=0.0023)
@@ -140,6 +137,10 @@ def led_select(label):
 
 # Main Function
 while True:
+    #take_photo()
+    #result = model.predict_from_file('./image.jpg')
+    #print(result.prediction)
+
     if button.is_pressed:
         take_photo()
         # Run photo through Lobe TF model
@@ -149,4 +150,5 @@ while True:
     else:
         # Pulse status light
         white_led.pulse(2,1)
-    sleep(1)
+
+    sleep(0.5)
