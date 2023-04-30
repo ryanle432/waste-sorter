@@ -1,0 +1,56 @@
+
+.main_page
+{
+    background-color: white;
+}
+  .checkbox-container.hidden {
+    display: none;
+  }
+
+
+  .image-container.regular {
+    float: left;
+  }
+  .image-container.left {
+    position: relative;
+    top: 0;
+    left: 10%;
+    bottom: 0;
+    width: 90%;
+  }
+.image.open
+{
+
+column-count: 3;
+ column-gap: 20px 20px;
+ width: 1200px;
+}
+
+.image-top 
+{
+    position: relative;
+    top: 0;
+    left: 10%;
+    bottom: 0;
+    width: 90%;
+}
+
+.image-shift
+{
+    position: relative;
+    top: 0;
+    left: 10%;
+    bottom: 0;
+    width: 90%;
+
+    column-count: 3;
+ column-gap: 20px 20px;
+
+}
+
+figure {
+ margin: 0;
+ display: inline-block;
+ margin-bottom: 0px;
+ width: 100%;
+}
