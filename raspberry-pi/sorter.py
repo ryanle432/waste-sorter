@@ -31,7 +31,8 @@ white_led = PWMLED(24) #Status light and retake photo
 recycle_servo1 = AngularServo(8, min_pulse_width=0.0006, max_pulse_width=0.0023)
 recycle_servo2 = AngularServo(7, min_pulse_width=0.0006, max_pulse_width=0.0023)
 
-recycle_servo1.angle = 0
+recycle_servo1.angle = 90
+recycle_servo2.angle = 90
 
 #camera = PiCamera()
 
@@ -67,7 +68,7 @@ def led_select(label):
         recycle_servo1.angle = 0
         recycle_servo2.angle= 0
 
-        print("cardboard")
+        print("glass")
         sleep(3)
 
         yellow_led.off()
@@ -79,7 +80,7 @@ def led_select(label):
         recycle_servo1.angle = 0
         recycle_servo2.angle= 0
 
-        print("cardboard")
+        print("metal")
         sleep(3)
 
         yellow_led.off()
@@ -91,7 +92,7 @@ def led_select(label):
         recycle_servo1.angle = 0
         recycle_servo2.angle= 0
 
-        print("cardboard")
+        print("plastic")
         sleep(3)
 
         yellow_led.off()
