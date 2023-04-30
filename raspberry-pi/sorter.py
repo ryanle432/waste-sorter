@@ -20,25 +20,22 @@ model = ImageModel.load('./waste-sorter-TFLite')
 #Create input, output, and camera objects
 button = Button(2)
 
-yellow_led = LED(17) #garbage
-blue_led = LED(27) #recycle
-green_led = LED(22) #compost
-red_led1 = LED(5) #garbage capacity
-red_led2 = LED(6) #recycle capacity
-red_led3 = LED(23) #compost capacity
+yellow_led = LED(17) #recycle
+blue_led = LED(27) #compost
+green_led = LED(22) 
 white_led = PWMLED(24) #Status light and retake photo
 
 recycle_servo1 = AngularServo(8, min_pulse_width=0.0006, max_pulse_width=0.0023)
 recycle_servo2 = AngularServo(7, min_pulse_width=0.0006, max_pulse_width=0.0023)
 
-recycle_servo1.angle = 90
-recycle_servo2.angle = 90
+recycle_servo1.angle = 0
+recycle_servo2.angle = 0
 
 compost_servo1 = AngularServo(20, min_pulse_width=0.0006, max_pulse_width=0.0023)
 compost_servo2 = AngularServo(21, min_pulse_width=0.0006, max_pulse_width=0.0023)
 
-compost_servo1.angle = 90
-compost_servo2.angle = 90
+compost_servo1.angle = 0
+compost_servo2.angle = 0
 
 #camera = PiCamera()
 
