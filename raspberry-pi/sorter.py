@@ -143,11 +143,12 @@ while True:
 
     if button.is_pressed:
         take_photo()
-         Run photo through Lobe TF model
+        # Run photo through Lobe TF model
         result = model.predict_from_file('./image.jpg')
         # --> Change image path
         led_select(result.prediction)
     else:
         # Pulse status light
         white_led.pulse(2,1)
+
     sleep(0.5)
