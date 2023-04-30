@@ -50,15 +50,15 @@ def led_select(label):
     # print(label)
     if label == "cardboard":
         yellow_led.on()
-        recycle_servo1.angle = 90
-        recycle_servo2.angle= 90
+        recycle_servo1.angle = 0
+        recycle_servo2.angle= 0
 
         print("cardboard")
-        sleep(2)
+        sleep(3)
 
         yellow_led.off()
-        recycle_servo1.angle = 0
-        recyle_servo2.angle = 0
+        recycle_servo1.angle = 90
+        recylce_servo2.angle = 90
 
     elif label == "glass":
         yellow_led.on()
