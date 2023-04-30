@@ -10,7 +10,6 @@
 
 #import Pi GPIO library button class
 from gpiozero import Button, LED, PWMLED
-from picamera import PiCamera
 import cv2
 from time import sleep
 
@@ -29,7 +28,7 @@ red_led2 = LED(6) #recycle capacity
 red_led3 = LED(23) #compost capacity
 white_led = PWMLED(24) #Status light and retake photo
 
-camera = PiCamera()
+#camera = PiCamera()
 
 # Take Photo
 def take_photo():
@@ -54,7 +53,7 @@ def led_select(label):
         print("glass")
         sleep(5)
         
-    elif label == "metal"
+    elif label == "metal":
         yellow_led.on()
         print("metal")
         sleep(5)
@@ -81,7 +80,7 @@ def led_select(label):
     else:
         yellow_led.off()
         blue_led.off()
-        green_led
+        green_led.off()
 
 #take_photo()
 #result = model.predict_from_file('./image.jpg')
