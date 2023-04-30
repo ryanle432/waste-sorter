@@ -31,6 +31,8 @@ white_led = PWMLED(24) #Status light and retake photo
 recycle_servo1 = AngularServo(8, min_pulse_width=0.0006, max_pulse_width=0.0023)
 recycle_servo2 = AngularServo(7, min_pulse_width=0.0006, max_pulse_width=0.0023)
 
+recycle_servo1.angle = 0
+
 #camera = PiCamera()
 
 print("Press button to take a photo.")
@@ -57,8 +59,8 @@ def led_select(label):
         sleep(3)
 
         yellow_led.off()
-        recycle_servo1.angle = 90
-        recycle_servo2.angle = 90
+        recycle_servo1.angle = -90
+        recycle_servo2.angle = -90
 
     elif label == "glass":
         yellow_led.on()
@@ -69,8 +71,8 @@ def led_select(label):
         sleep(3)
 
         yellow_led.off()
-        recycle_servo1.angle = 90
-        recycle_servo2.angle = 90
+        recycle_servo1.angle = -90
+        recycle_servo2.angle = -90
         
     elif label == "metal":
         yellow_led.on()
@@ -81,8 +83,8 @@ def led_select(label):
         sleep(3)
 
         yellow_led.off()
-        recycle_servo1.angle = 90
-        recycle_servo2.angle = 90
+        recycle_servo1.angle = -90
+        recycle_servo2.angle = -90
 
     elif label == "plastic":
         yellow_led.on()
@@ -93,8 +95,8 @@ def led_select(label):
         sleep(3)
 
         yellow_led.off()
-        recycle_servo1.angle = 90
-        recycle_servo2.angle = 90
+        recycle_servo1.angle = -90
+        recycle_servo2.angle = -90
 
     elif label == "paper":
         yellow_led.on()
@@ -105,8 +107,8 @@ def led_select(label):
         sleep(3)
 
         yellow_led.off()
-        recycle_servo1.angle = 90
-        recycle_servo2.angle = 90
+        recycle_servo1.angle = -90
+        recycle_servo2.angle = -90
 
     elif label == "compost":
         blue_led.on()
