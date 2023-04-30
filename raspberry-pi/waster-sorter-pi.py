@@ -21,7 +21,9 @@ button = Button(2)
 yellow_led = LED(17) #garbage
 blue_led = LED(27) #recycle
 green_led = LED(22) #compost
-red_led = LED(23) #hazardous waste facility
+red_led1 = LED(5) #garbage capacity
+red_led2 = LED(6) #recycle capacity
+red_led3 = LED(23) #compost capacity
 white_led = PWMLED(24) #Status light and retake photo
 
 camera = PiCamera()
@@ -55,21 +57,24 @@ def take_photo():
 # Identify prediction and turn on appropriate LED
 def led_select(label):
     print(label)
-    if label == "garbage":
+    if label == "cardboard":
         yellow_led.on()
+        print("cardboard")
         sleep(5)
-    if label == "recycle":
+    elif label == "compost":
         blue_led.on()
+        print("compost")
         sleep(5)
-    if label == "compost":
+    elif label == "glass":
         green_led.on()
+        print("glass")
         sleep(5)
-    if label == "hazardous waste facility":
-        red_led.on()
-        sleep(5)
-    if label == "not trash!":
+    elif label == "not trash":
         white_led.on()
+        print("not trash")
         sleep(5)
+    elif label == "paper":
+        print("paper")
     else:
         yellow_led.off()
         blue_led.off()
