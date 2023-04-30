@@ -30,6 +30,8 @@ white_led = PWMLED(24) #Status light and retake photo
 
 #camera = PiCamera()
 
+print("Press button to take a photo.")
+
 # Take Photo
 def take_photo():
     cap = cv2.VideoCapture(0)
