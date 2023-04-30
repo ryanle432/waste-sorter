@@ -14,15 +14,11 @@ import CameraPage from './Pages/CameraPage';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <CameraPage/>,
-  },
-  {
    path: "items",
    element: <LandFillPage/>
   },
   {
-    path: "about",
+    path: "/",
     element: <AboutPage />
   },
 
