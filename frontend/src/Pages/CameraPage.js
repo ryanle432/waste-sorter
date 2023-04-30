@@ -2,27 +2,17 @@ import logo from './../logo.svg';
 import Navbar from './../components/Navbar';
 import DisplayImage from './../components/Images';
 import './../App.css';
+import { Link } from 'react-router-dom';
+
+
+
 
 function CameraPage(){
   return (
-    <div className="App">
-      <Navbar/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-    
+    <>
+    <Navbar/>
+    <Link to="https://waste-sorter.herokuapp.com/">Try Out the Sorting Yourself!</Link>
+    </>
   );
 }
 

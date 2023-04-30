@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <ul class="Navbar">
-            <NavbarItem name="Webcam" route="/"/>
+            <a href="https://waste-sorter.herokuapp.com/">Go to Waste Sorter App</a>
             <NavbarItem name="Trashcan Items" route="/items"/>
-            <NavbarItem name="About Us" route="/about"/>
+            <NavbarItem name="About Us" route="/"/>
         </ul>
     )
 }
