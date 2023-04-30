@@ -125,6 +125,7 @@ def led_select(label):
         print("compost")
         sleep(5)
 
+        blue_led.off()
         compost_servo1.angle = 0
         compost_servo2.angle= 0
 
