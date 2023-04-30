@@ -1,0 +1,25 @@
+.about-section
+{
+    display: flex;
+}
+
+.aboutBottom
+{
+    display:flex;
+    flex-direction: column;
+    height: 55%;
+    align-items: center;
+    margin-top: 50px;
+}
+.aboutBottom p{
+    width: 1200px;
+}
+
+.about .aboutButtom h1{
+    font-weight: 400;
+    font-size: 70px;
+    color: black;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
