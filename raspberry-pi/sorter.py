@@ -53,63 +53,63 @@ def led_select(label):
     # print(label)
     if label == "cardboard":
         yellow_led.on()
-        recycle_servo1.angle = 0
-        recycle_servo2.angle= 0
+        recycle_servo1.angle = -90
+        recycle_servo2.angle= -90
 
         print("cardboard")
         sleep(3)
 
         yellow_led.off()
-        recycle_servo1.angle = -90
-        recycle_servo2.angle = -90
+        recycle_servo1.angle = 90
+        recycle_servo2.angle = 90
 
     elif label == "glass":
         yellow_led.on()
-        recycle_servo1.angle = 0
-        recycle_servo2.angle= 0
+        recycle_servo1.angle = -90
+        recycle_servo2.angle= -90
 
         print("glass")
         sleep(3)
 
         yellow_led.off()
-        recycle_servo1.angle = -90
-        recycle_servo2.angle = -90
+        recycle_servo1.angle = 0
+        recycle_servo2.angle = 0
         
     elif label == "metal":
         yellow_led.on()
-        recycle_servo1.angle = 0
-        recycle_servo2.angle= 0
+        recycle_servo1.angle = -90
+        recycle_servo2.angle= -90
 
         print("metal")
         sleep(3)
 
         yellow_led.off()
-        recycle_servo1.angle = -90
-        recycle_servo2.angle = -90
+        recycle_servo1.angle = 0
+        recycle_servo2.angle = 0
 
     elif label == "plastic":
         yellow_led.on()
-        recycle_servo1.angle = 0
-        recycle_servo2.angle= 0
+        recycle_servo1.angle = -90
+        recycle_servo2.angle= -90
 
         print("plastic")
         sleep(3)
 
         yellow_led.off()
-        recycle_servo1.angle = -90
-        recycle_servo2.angle = -90
+        recycle_servo1.angle = 0
+        recycle_servo2.angle = 0
 
     elif label == "paper":
         yellow_led.on()
-        recycle_servo1.angle = 0
-        recycle_servo2.angle= 0
+        recycle_servo1.angle = -90
+        recycle_servo2.angle= -90
 
         print("cardboard")
         sleep(3)
 
         yellow_led.off()
-        recycle_servo1.angle = -90
-        recycle_servo2.angle = -90
+        recycle_servo1.angle = 0
+        recycle_servo2.angle = 0
 
     elif label == "compost":
         blue_led.on()
